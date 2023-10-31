@@ -2571,7 +2571,7 @@ private:
 };
 
 //全局函数实现左移重载
-//ostream对象只能有一个
+//ostream对象只能有一个，所以用引用传入
 ostream& operator<<(ostream& out, Person& p) {
 	out << "a:" << p.m_A << " b:" << p.m_B;
 	return out;
@@ -2670,7 +2670,8 @@ void test02() {
 	cout << myInt << endl;
 }
 
-int main() {
+int ma
+in() {
 
 	test01();
 	//test02();
